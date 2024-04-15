@@ -1,0 +1,24 @@
+{
+  "name": "api-farm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "dev": "nodemon index.js --exec babel-node "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "express-promise-router": "^4.1.1",
+    "mongoose": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}
