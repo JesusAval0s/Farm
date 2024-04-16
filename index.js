@@ -7,7 +7,10 @@ import cors from "cors";
 
 //Connection bd
 //mongoose.Promise;
-const dbUrl= "mongodb://127.0.0.1:27017/info";
+//const dbUrl= "mongodb://127.0.0.1:27017/info";
+
+ const dbUrl=`mongodb+srvjklsjesus:zsoZJRBNJllOxmOS@farm.zywh6rd.mongodb.net/`
+
 mongoose.connect(dbUrl)
 .then(mongoose=>console.log('Base de datos conectado'));
 
