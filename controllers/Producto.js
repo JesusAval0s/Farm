@@ -115,5 +115,36 @@ export default {
       });
       next(error);
     }
-  }
+  },
+
+  updateProducto:async(req,res,next)=>{
+    try {
+        const {nombre, cantidad, fechaCaducidad, dosis, precio}=req.body;
+
+        const actualizarDatos={
+          nombre, cantidad, fechaCaducidad, dosis, precio
+      };
+      
+      const actualizar = await models.Productos.findByIdAndUpdate(req.params.id, actualizarDatos);
+      res.status(200).json(actualizar);
+          
+      } catch (error) {
+          res.status(500).send({
+              message:"No se pudo realizar la conexion"
+          })
+          next(error);
+      }
+   },
+
+   getOneProducto:async (req,res,next)=>{
+    try {
+     const buscar= await models.Productos.findById(req.params.id);
+     res.status(200).json(buscar);
+    } catch (error) {
+     res.status(500).send({
+         message:"No se obtuvo la informacion"
+     })
+     next(error);
+   }
+}
 };

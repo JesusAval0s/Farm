@@ -10,6 +10,8 @@ router.get('/buscarProducto',ProductoC.getProductos);
 router.get('/buscarProducto/:id',ProductoC.getProducto);
 router.delete('/eliminar/:id',ProductoC.delProducto);
 router.put('/vender/:id', ProductoC.venderProducto);
+router.patch('/actualizar/:id', ProductoC.updateProducto);
+router.get('/buscarOneProducto/:id', ProductoC.getOneProducto);
 
 
 
